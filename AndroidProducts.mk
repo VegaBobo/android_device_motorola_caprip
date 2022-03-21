@@ -17,4 +17,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_caprip.mk
+     $(LOCAL_DIR)/twrp_caprip.mk
