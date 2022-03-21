@@ -18,3 +18,8 @@
 
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/twrp_caprip.mk
+
+COMMON_LUNCH_CHOICES := \
+    twrp_caprip-user \
+    twrp_caprip-userdebug \
+    twrp_caprip-eng
