@@ -18,17 +18,35 @@
 
 LOCAL_PATH := device/motorola/caprip
 
+# API
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
+
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
     system \
-    vendor
+    system_ext \
+    vendor \
+    vendor_boot \
+    odm \
+    product \
+    vbmeta \
+    vbmeta_system \
+    dtbo
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
+
+# tell update_engine to not change dynamic partition table during updates
+# needed since our qti_dynamic_partitions does not include
+# vendor and odm and we also dont want to AB update them
+TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
