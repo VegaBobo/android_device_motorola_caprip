@@ -27,12 +27,11 @@ $(call inherit-product, device/motorola/caprip/device.mk)
 
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
-$(call inherit-product, vendor/twrp/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := caprip
 PRODUCT_NAME := twrp_caprip
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := motorola
+PRODUCT_MODEL := moto g(30)
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_RELEASE_NAME := motorola motorola
+PRODUCT_RELEASE_NAME := caprip
