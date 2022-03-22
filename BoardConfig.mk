@@ -104,6 +104,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := device/motorola/caprip/installer
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
 # Modules
 TW_LOAD_VENDOR_MODULES := "exfat.ko nova_0flash_mmi.ko"
