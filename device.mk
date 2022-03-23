@@ -16,6 +16,12 @@
 # limitations under the License.
 #
 
+# Inherit from common AOSP config
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 LOCAL_PATH := device/motorola/caprip
 
 # API
