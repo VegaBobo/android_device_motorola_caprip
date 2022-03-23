@@ -59,12 +59,20 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# fastbootd
+PRODUCT_PACKAGES += \
+     android.hardware.fastboot@1.0-impl-mock \
+     fastbootd
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

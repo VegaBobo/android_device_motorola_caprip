@@ -33,6 +33,7 @@ on fs
 
 on boot
     setprop sys.usb.config mtp,adb
+    start health-hal-2-1
 
 on post-fs
     start boot-hal-1-1
