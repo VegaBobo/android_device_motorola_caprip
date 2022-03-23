@@ -122,6 +122,8 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_RESETPROP := true
 #TW_FORCE_USE_BUSYBOX := true
+TW_Y_OFFSET := 48
+TW_H_OFFSET := -48
 
 # Modules
 TW_LOAD_VENDOR_MODULES := "exfat.ko nova_0flash_mmi.ko"
