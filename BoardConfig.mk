@@ -35,6 +35,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_BOARD_SUFFIX := _64
 
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := caprip
 
@@ -93,6 +96,11 @@ TARGET_BOARD_PLATFORM := bengal
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
+# Use mke2fs to create ext4 images
+TARGET_USES_MKE2FS := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -109,6 +117,12 @@ USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := device/motorola/caprip/installer
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_INCLUDE_NTFS_3G := true
+TW_INCLUDE_RESETPROP := true
+#TW_FORCE_USE_BUSYBOX := true
 
 # Modules
 TW_LOAD_VENDOR_MODULES := "exfat.ko nova_0flash_mmi.ko"
+
