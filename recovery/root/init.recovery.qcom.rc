@@ -33,3 +33,7 @@ on fs
 
 on boot
     setprop sys.usb.config mtp,adb
+
+on post-fs
+    start boot-hal-1-1
+

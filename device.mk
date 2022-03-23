@@ -50,11 +50,14 @@ TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.1-impl-qti.recovery \
+    bootctrl.bengal \
+    bootctrl.bengal.recovery
 
+# HIDL
 PRODUCT_PACKAGES += \
-    bootctrl.bengal
+    libhidltransport \
+    libhwbinder
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -62,3 +65,8 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/qcom-caf/bootctrl 

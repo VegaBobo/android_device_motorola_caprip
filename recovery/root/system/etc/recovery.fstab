@@ -25,3 +25,4 @@ product                                                 /product                
 # and fails if it does not find it.
 #/dev/block/bootdevice/by-name/misc                      /misc                    emmc    defaults                                             defaults
 #/dev/block/zram0                                        none                     swap    defaults                                             zramsize=70%
+/dev/block/bootdevice/by-name/misc                      /misc                    emmc    defaults                                             defaults
