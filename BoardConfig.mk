@@ -38,6 +38,9 @@ TARGET_BOARD_SUFFIX := _64
 # Assert
 TARGET_OTA_ASSERT_DEVICE := caprip
 
+# GPT Utils
+BOARD_PROVIDES_GPTUTILS := true
+
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
 #BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296 # This is the maximum known partition size, but it can be higher, so we just omit it
